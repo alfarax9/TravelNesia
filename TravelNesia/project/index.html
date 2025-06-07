@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelNesia - Pemesanan Travel & Hotel Indonesia</title>
+    <link rel="stylesheet" href="/project/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>TravelNesia</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="/project/index.html" class="nav-link">Beranda</a></li>
+                <li><a href="/project/pesawat.html" class="nav-link">Pesawat</a></li>
+                <li><a href="/project/kereta.html" class="nav-link">Kereta</a></li>
+                <li><a href="/project/kapal.html" class="nav-link">Kapal</a></li>
+                <li><a href="/project/hotel.html" class="nav-link active">Hotel</a></li>
+            </ul>
+            <div class="nav-auth">
+                <button class="btn-login">Masuk</button>
+                <button class="btn-register">Daftar</button>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Jelajahi Keindahan Indonesia</h1>
+            <p>Temukan destinasi terbaik dan pesan tiket perjalanan Anda dengan mudah</p>
+            <div class="hero-buttons">
+                <button class="btn-primary" onclick="scrollToServices()">Mulai Pesan</button>
+                <button class="btn-secondary">Pelajari Lebih</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2>Layanan Kami</h2>
+            <p class="services-subtitle">Nikmati perjalanan terbaik di seluruh Indonesia</p>
+            
+            <div class="services-grid">
+                <div class="service-card" onclick="location.href='pesawat.html'">
+                    <div class="service-icon">✈️</div>
+                    <h3>Tiket Pesawat</h3>
+                    <p>Terbang ke seluruh Indonesia dengan harga terbaik</p>
+                    <button class="service-btn">Pesan Sekarang</button>
+                </div>
+
+                <div class="service-card" onclick="location.href='kereta.html'">
+                    <div class="service-icon">🚄</div>
+                    <h3>Tiket Kereta</h3>
+                    <p>Perjalanan nyaman dengan kereta api Indonesia</p>
+                    <button class="service-btn">Pesan Sekarang</button>
+                </div>
+
+                <div class="service-card" onclick="location.href='kapal.html'">
+                    <div class="service-icon">🚢</div>
+                    <h3>Tiket Kapal</h3>
+                    <p>Jelajahi kepulauan Indonesia dengan kapal laut</p>
+                    <button class="service-btn">Pesan Sekarang</button>
+                </div>
+
+                <div class="service-card" onclick="location.href='hotel.html'">
+                    <div class="service-icon">🏨</div>
+                    <h3>Hotel</h3>
+                    <p>Temukan akomodasi terbaik di seluruh Indonesia</p>
+                    <button class="service-btn">Pesan Sekarang</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2>Mengapa Pilih TravelNesia?</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">💰</div>
+                    <h3>Harga Terbaik</h3>
+                    <p>Dapatkan harga termurah untuk setiap perjalanan Anda</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Aman & Terpercaya</h3>
+                    <p>Transaksi aman dengan jaminan uang kembali</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📱</div>
+                    <h3>Mudah Digunakan</h3>
+                    <p>Interface yang sederhana dan mudah dipahami</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🎧</div>
+                    <h3>Support 24/7</h3>
+                    <p>Customer service siap membantu kapan saja</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>Kata Mereka Tentang Kami</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Sangat mudah dan cepat untuk booking tiket. Harga juga sangat kompetitif!"</p>
+                    <div class="testimonial-author">
+                        <strong>Sarah Wijaya</strong>
+                        <span>Jakarta</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Website yang sangat user-friendly. Recommended untuk yang suka traveling!"</p>
+                    <div class="testimonial-author">
+                        <strong>Budi Santoso</strong>
+                        <span>Surabaya</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Pelayanan customer service nya excellent. Sangat membantu!"</p>
+                    <div class="testimonial-author">
+                        <strong>Maya Sari</strong>
+                        <span>Bandung</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TravelNesia</h3>
+                    <p>Platform terpercaya untuk booking travel & hotel di Indonesia</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Layanan</h4>
+                    <ul>
+                        <li><a href="/project/pesawat.html">Tiket Pesawat</a></li>
+                        <li><a href="/project/kereta.html">Tiket Kereta</a></li>
+                        <li><a href="/project/kapal.html">Tiket Kapal</a></li>
+                        <li><a href="/project/hotel.html">Hotel</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Bantuan</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Hubungi Kami</a></li>
+                        <li><a href="#">Syarat & Ketentuan</a></li>
+                        <li><a href="#">Kebijakan Privasi</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Ikuti Kami</h4>
+                    <div class="social-links">
+                        <a href="#">Facebook</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">Twitter</a>
+                        <a href="#">YouTube</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 TravelNesia. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/project/js/script.js"></script>
+</body>
+</html>

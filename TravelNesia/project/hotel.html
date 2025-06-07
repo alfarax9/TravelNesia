@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel - TravelNesia</title>
+    <link rel="stylesheet" href="/project/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>TravelNesia</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="/project/index.html" class="nav-link">Beranda</a></li>
+                <li><a href="/project/pesawat.html" class="nav-link">Pesawat</a></li>
+                <li><a href="/project/kereta.html" class="nav-link">Kereta</a></li>
+                <li><a href="/project/kapal.html" class="nav-link">Kapal</a></li>
+                <li><a href="/project/hotel.html" class="nav-link active">Hotel</a></li>
+            </ul>
+            <div class="nav-auth">
+                <button class="btn-login">Masuk</button>
+                <button class="btn-register">Daftar</button>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>🏨 Booking Hotel</h1>
+            <p>Temukan akomodasi terbaik di seluruh Indonesia</p>
+        </div>
+    </section>
+
+    <!-- Booking Form -->
+    <section class="booking-section">
+        <div class="container">
+            <div class="booking-form-container">
+                <form class="booking-form" id="hotelForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="city">Kota Tujuan</label>
+                            <select id="city" name="city" required>
+                                <option value="">Pilih Kota</option>
+                                <option value="jakarta">Jakarta</option>
+                                <option value="surabaya">Surabaya</option>
+                                <option value="bali">Bali</option>
+                                <option value="bandung">Bandung</option>
+                                <option value="medan">Medan</option>
+                                <option value="yogyakarta">Yogyakarta</option>
+                                <option value="makassar">Makassar</option>
+                                <option value="palembang">Palembang</option>
+                                <option value="semarang">Semarang</option>
+                                <option value="malang">Malang</option>
+                                <option value="solo">Solo</option>
+                                <option value="balikpapan">Balikpapan</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="checkin">Check-in</label>
+                            <input type="date" id="checkin" name="checkin" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="checkout">Check-out</label>
+                            <input type="date" id="checkout" name="checkout" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="guests">Jumlah Tamu</label>
+                            <select id="guests" name="guests" required>
+                                <option value="1">1 Tamu</option>
+                                <option value="2">2 Tamu</option>
+                                <option value="3">3 Tamu</option>
+                                <option value="4">4 Tamu</option>
+                                <option value="5">5 Tamu</option>
+                                <option value="6">6 Tamu</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="rooms">Jumlah Kamar</label>
+                            <select id="rooms" name="rooms" required>
+                                <option value="1">1 Kamar</option>
+                                <option value="2">2 Kamar</option>
+                                <option value="3">3 Kamar</option>
+                                <option value="4">4 Kamar</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="priceRange">Kisaran Harga</label>
+                            <select id="priceRange" name="priceRange">
+                                <option value="">Semua Harga</option>
+                                <option value="budget">&lt; Rp 500.000</option>
+                                <option value="mid">Rp 500.000 - 1.500.000</option>
+                                <option value="luxury">Rp 1.500.000 - 3.000.000</option>
+                                <option value="premium">&gt; Rp 3.000.000</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-search">🔍 Cari Hotel</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Results -->
+    <section class="search-results" id="hotelResults" style="display: none;">
+        <div class="container">
+            <h2>Hasil Pencarian Hotel</h2>
+            <div class="results-grid" id="hotelResultsGrid">
+                <!-- Results will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TravelNesia</h3>
+                    <p>Platform terpercaya untuk booking travel & hotel di Indonesia</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Layanan</h4>
+                    <ul>
+                        <li><a href="/project/pesawat.html">Tiket Pesawat</a></li>
+                        <li><a href="/project/kereta.html">Tiket Kereta</a></li>
+                        <li><a href="/project/kapal.html">Tiket Kapal</a></li>
+                        <li><a href="/project/hotel.html">Hotel</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Bantuan</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Hubungi Kami</a></li>
+                        <li><a href="#">Syarat & Ketentuan</a></li>
+                        <li><a href="#">Kebijakan Privasi</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Ikuti Kami</h4>
+                    <div class="social-links">
+                        <a href="#">Facebook</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">Twitter</a>
+                        <a href="#">YouTube</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 TravelNesia. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/project/js/script.js"></script>
+    <script src="/project/js/hotel.js"></script>
+</body>
+</html>

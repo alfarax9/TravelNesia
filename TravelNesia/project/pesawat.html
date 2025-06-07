@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiket Pesawat - TravelNesia</title>
+    <link rel="stylesheet" href="/project/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>TravelNesia</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="/project/index.html" class="nav-link">Beranda</a></li>
+                <li><a href="/project/pesawat.html" class="nav-link">Pesawat</a></li>
+                <li><a href="/project/kereta.html" class="nav-link">Kereta</a></li>
+                <li><a href="/project/kapal.html" class="nav-link">Kapal</a></li>
+                <li><a href="/project/hotel.html" class="nav-link active">Hotel</a></li>
+            </ul>
+            <div class="nav-auth">
+                <button class="btn-login">Masuk</button>
+                <button class="btn-register">Daftar</button>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>✈️ Booking Tiket Pesawat</h1>
+            <p>Terbang ke seluruh Indonesia dengan harga terbaik</p>
+        </div>
+    </section>
+
+    <!-- Booking Form -->
+    <section class="booking-section">
+        <div class="container">
+            <div class="booking-form-container">
+                <form class="booking-form" id="flightForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="from">Dari</label>
+                            <select id="from" name="from" required>
+                                <option value="">Pilih Kota Asal</option>
+                                <option value="CGK">Jakarta (CGK)</option>
+                                <option value="SUB">Surabaya (SUB)</option>
+                                <option value="DPS">Denpasar (DPS)</option>
+                                <option value="BDO">Bandung (BDO)</option>
+                                <option value="MDN">Medan (MDN)</option>
+                                <option value="PLM">Palembang (PLM)</option>
+                                <option value="BPN">Balikpapan (BPN)</option>
+                                <option value="UPG">Makassar (UPG)</option>
+                                <option value="SOC">Solo (SOC)</option>
+                                <option value="MLG">Malang (MLG)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="to">Ke</label>
+                            <select id="to" name="to" required>
+                                <option value="">Pilih Kota Tujuan</option>
+                                <option value="CGK">Jakarta (CGK)</option>
+                                <option value="SUB">Surabaya (SUB)</option>
+                                <option value="DPS">Denpasar (DPS)</option>
+                                <option value="BDO">Bandung (BDO)</option>
+                                <option value="MDN">Medan (MDN)</option>
+                                <option value="PLM">Palembang (PLM)</option>
+                                <option value="BPN">Balikpapan (BPN)</option>
+                                <option value="UPG">Makassar (UPG)</option>
+                                <option value="SOC">Solo (SOC)</option>
+                                <option value="MLG">Malang (MLG)</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="departure">Tanggal Berangkat</label>
+                            <input type="date" id="departure" name="departure" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="return">Tanggal Pulang (Opsional)</label>
+                            <input type="date" id="return" name="return">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="passengers">Jumlah Penumpang</label>
+                            <select id="passengers" name="passengers" required>
+                                <option value="1">1 Penumpang</option>
+                                <option value="2">2 Penumpang</option>
+                                <option value="3">3 Penumpang</option>
+                                <option value="4">4 Penumpang</option>
+                                <option value="5">5 Penumpang</option>
+                                <option value="6">6 Penumpang</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="class">Kelas</label>
+                            <select id="class" name="class" required>
+                                <option value="economy">Ekonomi</option>
+                                <option value="business">Bisnis</option>
+                                <option value="first">First Class</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-search">🔍 Cari Penerbangan</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Results -->
+    <section class="search-results" id="searchResults" style="display: none;">
+        <div class="container">
+            <h2>Hasil Pencarian Penerbangan</h2>
+            <div class="results-grid" id="resultsGrid">
+                <!-- Results will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TravelNesia</h3>
+                    <p>Platform terpercaya untuk booking travel & hotel di Indonesia</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Layanan</h4>
+                    <ul>
+                        <li><a href="/project/pesawat.html">Tiket Pesawat</a></li>
+                        <li><a href="/project/kereta.html">Tiket Kereta</a></li>
+                        <li><a href="/project/kapal.html">Tiket Kapal</a></li>
+                        <li><a href="/project/hotel.html">Hotel</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Bantuan</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Hubungi Kami</a></li>
+                        <li><a href="#">Syarat & Ketentuan</a></li>
+                        <li><a href="#">Kebijakan Privasi</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Ikuti Kami</h4>
+                    <div class="social-links">
+                        <a href="#">Facebook</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">Twitter</a>
+                        <a href="#">YouTube</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 TravelNesia. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/project/js/script.js"></script>
+    <script src="/project/js/pesawat.js"></script>
+</body>
+</html>
